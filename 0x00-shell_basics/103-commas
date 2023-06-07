@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A1p -a -U | grep -E '^[0-9A-Za-z]' | sort -df | awk '{printf "%s%s", $0, (NR==NF ? "\n" : ", ")}'
+find . -maxdepth 1 -printf "%f\n" | sort -df | awk '{printf "%s%s", $0, (NR==NF ? "\n" : ", ")}'
