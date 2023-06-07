@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -printf "%f\n" | sort -df | awk '{printf "%s%s", $0, (NR==NF ? "\n" : ", ")}'
+ls -xamp
